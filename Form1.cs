@@ -80,7 +80,7 @@ namespace ElmaAutoGravityApples
                     }
                 }
 
-                // get polygons count
+                // get objects count
                 data = reader.ReadBytes(8);
                 totalBytesRead += 8;
                 double objectCountAsDouble = BitConverter.ToDouble(data);
@@ -118,7 +118,7 @@ namespace ElmaAutoGravityApples
                         // gravity down: gravityType == 2 // anim number stored value == 2 // anim number displayed value in elma editor == 3 // qfood3.pcx
                         // gravity left: gravityType == 3 // anim number stored value == 3 // anim number displayed value in elma editor == 4 // qfood4.pcx
                         // gravity right: gravityType == 4 // anim number stored value == 4 // anim number displayed value in elma editor == 5 // qfood5.pcx
-                        newAnimationTypeAsInts.Add(gravityTypeAsInt); // add 1 since normal apples are 0 and should have anim number 1 = qfood1.pcx - https://mopolauta.moposite.com/viewtopic.php?p=271437#p271437
+                        newAnimationTypeAsInts.Add(gravityTypeAsInt);
                         updateOffsetsAsInts.Add(offset);
                     }
                 }
@@ -144,7 +144,7 @@ namespace ElmaAutoGravityApples
                         int animationTypeAsInt = BitConverter.ToInt32(data);
                         if (animationTypeAsInt != expectedAnimationTypeAsInts[i])
                         {
-                            MessageBox.Show("Verifying Animation Type: " + animationTypeAsInt + " == " + expectedAnimationTypeAsInts[i]);
+                            MessageBox.Show("Verification Failed: " + animationTypeAsInt + " != " + expectedAnimationTypeAsInts[i]);
                             this.Close();  // Closes the main form
                         }
                     }
