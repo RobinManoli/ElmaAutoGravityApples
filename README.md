@@ -2,7 +2,7 @@ Download:
 https://github.com/RobinManoli/ElmaAutoGravityApples/raw/main/ElmaAutoGravityApples.zip
 
 Discuss:
-https://mopolauta.moposite.com/posting.php?mode=quote&p=240512
+https://mopolauta.moposite.com/viewtopic.php?t=10227
 
 Test Level (for lgr):
 https://elma.online/levels/574599
